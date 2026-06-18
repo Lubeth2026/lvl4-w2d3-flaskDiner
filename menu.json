@@ -1,2 +1,1 @@
-
-[{}]
+[{"food": "Burger", "description": "Juice American Burger with Fries", "price": "10", "category": "Entree"}, {"food": "Pizza", "description": "Classic Pepperoni with extra Cheese", "price": "12", "category": "Entree"}, {"food": "Salad", "description": "Fresh Caesar salad with Croutons", "price": "8", "category": "Salad"}, {"food": "Cheesecake", "description": "New York Cheesecake Slice", "price": "6", "category": "Dessert"}, {"food": "Tacos x3", "description": "Your choice of meat with cilantro and onions", "price": "15", "category": "Entree"}]
