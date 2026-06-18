@@ -1,21 +1,9 @@
 
-import json
+from menu_manager import get_menu, save_menu
 
 # print("Greetings!")
 
-ORDERS_FILE = "menu.json"
-
-# Function for loading the menu items READ
-def menu_items():
-    with open(ORDERS_FILE, "r") as file:
-        return json.load(file)
-
-# Function that accepts data & WRITES it in the menu.json file
-def save_items(data):
-    with open(ORDERS_FILE, "w") as file:
-        json.dump(data, file, indent=5)
-
-data = menu_items()
+data = get_menu()
 
 food = input("Enter the food item name: ")
 description = input("Brief description of food: ")
@@ -26,7 +14,5 @@ new_food = {
     "food": food, "description": description, "price": price, "category": category
 }
 data.append(new_food)
-save_items(data)
+save_menu(data)
 print(f"{new_food} was added to the Menu!")
-
-print(menu_items())
