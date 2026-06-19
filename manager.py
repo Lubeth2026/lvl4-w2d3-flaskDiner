@@ -22,4 +22,3 @@ def get_item_by_name(food_name):
             return item
         
     return None
-

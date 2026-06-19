@@ -1,5 +1,5 @@
 
-from flask import Flask
+from flask import Flask, request
 from manager import get_menu, save_menu
 
 app = Flask(__name__)
@@ -23,3 +23,17 @@ def get_item_by_name(food_name):
             return item
         
     return {"message": "Food item not found."}
+
+@app.route("/menu", methods=["POST"])
+def add_food():
+    data = get_menu()
+
+    new_food = request.get_json()
+
+    data.append(new_food)
+
+    save_menu(data)
+
+    return {
+        "message": "Food was added successfully", "food": new_food
+    }, 201
