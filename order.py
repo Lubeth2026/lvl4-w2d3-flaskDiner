@@ -1,5 +1,5 @@
 
-from menu_manager import get_menu, save_menu
+from manager import get_menu, save_menu
 
 # print("Greetings!")
 
